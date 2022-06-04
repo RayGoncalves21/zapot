@@ -66,7 +66,7 @@ def bot():
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
 			time.sleep(3)
-			texto_modificado = f'Para retirar dinheiro da sua conta: {os.linesep} Tudo o que você tem que fazer é ir em *"Saque"*, digitar o valor e a resposta da Pergunta de Segurança. {os.linesep} Um código único de retirada será gerado. copie o código e cole na página da Pay4Fun. {os.linesep} Em seguida, selecione o método que deseja receber e preencha os seu dados solicitados. {os.linesep} *Acesse: deujogo.bet* para sacar seu saldo disponível agora mesmo.'
+			texto_modificado = f'Para retirar dinheiro da sua conta: {os.linesep} Tudo o que você tem que fazer é ir em *Saque*, digitar o valor e a resposta da Pergunta de Segurança. {os.linesep} Um código único de retirada será gerado. copie o código e cole na página da Pay4Fun. {os.linesep} Em seguida, selecione o método que deseja receber e preencha os seu dados solicitados. {os.linesep} *Acesse: deujogo.bet* para sacar seu saldo disponível agora mesmo.'
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 				#VOLTAR PARA O CONTATO PADRÃO
 			contato_padrao = driver.find_element_by_class_name('_2XH9R')
@@ -143,6 +143,44 @@ def bot():
 			acao_contato.click()
 			acao_contato.perform()
 
+		elif msg == '8':
+			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
+			campo_de_texto.click()
+			texto_modificado = f'*Acesse:  https://deujogo.bet/recuperar-clave* {os.linesep}Em seguida, digite o seu E-mail e clique em "Recuperação de senha"'
+			time.sleep(3)
+			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
+				#VOLTAR PARA O CONTATO PADRÃO
+			contato_padrao = driver.find_element_by_class_name('_2XH9R')
+			acao_contato = webdriver.common.action_chains.ActionChains(driver)
+			acao_contato.move_to_element_with_offset(contato_padrao,0,-20)
+			acao_contato.click()
+			acao_contato.perform()
+			acao_contato.click()
+			acao_contato.perform()	
+
+
+		elif msg == '9':
+			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
+			campo_de_texto.click()
+			time.sleep(3)
+			campo_de_texto.send_keys('Aguarde, em alguns minutos enviaremos um e-mail de recuperação', Keys.ENTER)
+							#VOLTAR PARA O CONTATO PADRÃO
+
+			contato_padrao = driver.find_element_by_class_name('_2XH9R')
+			acao_contato = webdriver.common.action_chains.ActionChains(driver)
+			acao_contato.move_to_element_with_offset(contato_padrao,0,-20)
+			acao_contato.click()
+			acao_contato.perform()
+			acao_contato.click()
+			acao_contato.perform()
+				#Mandar mensagem para atendente
+
+			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
+			campo_de_texto.click()
+			time.sleep(3)
+			campo_de_texto.send_keys('RECUPERAR CÓDIGO DA PERGUNTA SECRETA:', Keys.ENTER)
+			campo_de_texto.send_keys(telefone_final, Keys.ENTER)
+
 
 		elif msg == 'Cadastro':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
@@ -162,7 +200,7 @@ def bot():
 		elif msg == 'Deposito':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
-			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet/deposito* para realizar um depósito agora mesmo.'
+			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet* para realizar um depósito agora mesmo.'
 			time.sleep(3)
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 							#VOLTAR PARA O CONTATO PADRÃO
@@ -185,7 +223,7 @@ def bot():
 		elif msg == 'Depósito':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
-			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet/deposito* para realizar um depósito agora mesmo.'
+			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet* para realizar um depósito agora mesmo.'
 			time.sleep(3)
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 							#VOLTAR PARA O CONTATO PADRÃO
@@ -208,7 +246,7 @@ def bot():
 		elif msg == 'Como faço deposito':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
-			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet/deposito* para realizar um depósito agora mesmo.'
+			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet* para realizar um depósito agora mesmo.'
 			time.sleep(3)
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 							#VOLTAR PARA O CONTATO PADRÃO
@@ -231,7 +269,7 @@ def bot():
 		elif msg == 'Como faço depósito':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
-			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet/deposito* para realizar um depósito agora mesmo.'
+			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet* para realizar um depósito agora mesmo.'
 			time.sleep(3)
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 							#VOLTAR PARA O CONTATO PADRÃO
@@ -254,7 +292,7 @@ def bot():
 		elif msg == 'Como faço depósito?':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
-			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet/deposito* para realizar um depósito agora mesmo.'
+			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet* para realizar um depósito agora mesmo.'
 			time.sleep(3)
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 							#VOLTAR PARA O CONTATO PADRÃO
@@ -332,7 +370,7 @@ def bot():
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
 			time.sleep(3)
-			campo_de_texto.send_keys('aguarde alguns minutos que você será atendido...', Keys.ENTER)
+			campo_de_texto.send_keys('Aguarde, dentro de alguns minutos que você será atendido...', Keys.ENTER)
 							#VOLTAR PARA O CONTATO PADRÃO
 
 			contato_padrao = driver.find_element_by_class_name('_2XH9R')
@@ -386,7 +424,7 @@ def bot():
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
 			time.sleep(3)
-			texto_modificado = f'Bem-vindo ao atendimento da Deu Jogo. *Como posso ajudar você hoje?*{os.linesep} [1] - Como fazer o meu cadastro no site da Deu Jogo? {os.linesep} [2] - Como faço depósito?{os.linesep} [3] - Como faço saque? {os.linesep} [4] - Regulamento  {os.linesep}[5] - Falar com um atendente{os.linesep} [6] - Jogos cancelados ou adiados{os.linesep}[7] - Dúvidas frequentes - Central de ajuda'
+			texto_modificado = f'Bem-vindo ao atendimento da Deu Jogo. *Como posso ajudar você hoje?*{os.linesep} [1] - Como fazer o meu cadastro no site da Deu Jogo? {os.linesep} [2] - Como faço depósito?{os.linesep} [3] - Como faço saque? {os.linesep} [4] - Regulamento  {os.linesep}[5] - Falar com um atendente{os.linesep} [6] - Jogos cancelados ou adiados{os.linesep}[7] - Dúvidas frequentes - Central de ajuda {os.linesep}[8] - Esqueci minha senha {os.linesep}[9] - Recuperar pergunta de segurança para saque'
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 				#VOLTAR PARA O CONTATO PADRÃO
 			contato_padrao = driver.find_element_by_class_name('_2XH9R')
