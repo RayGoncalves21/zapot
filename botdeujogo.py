@@ -51,7 +51,7 @@ def bot():
 		elif msg == '2':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
-			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet* para realizar um deposito agora mesmo. {os.linesep}'
+			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet* para realizar um depósito agora mesmo. {os.linesep}'
 			time.sleep(3)
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 				#VOLTAR PARA O CONTATO PADRÃO
@@ -66,7 +66,7 @@ def bot():
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
 			time.sleep(3)
-			texto_modificado = f'Para retirar dinheiro da sua conta: {os.linesep} tudo o que você tem que fazer é ir em "Saque", digitar a quantia e a resposta da Pergunta Secreta. {os.linesep} Um código único de retirada será gerado. copie o código e cole na página da Pay4Fun, {os.linesep} em seguida, selecione o método que deseja receber com os seu dados solicitados. {os.linesep} *Acesse: deujogo.bet* para sacar seu saldo disponível agora mesmo.'
+			texto_modificado = f'Para retirar dinheiro da sua conta: {os.linesep} Tudo o que você tem que fazer é ir em *"Saque"*, digitar o valor e a resposta da Pergunta de Segurança. {os.linesep} Um código único de retirada será gerado. copie o código e cole na página da Pay4Fun. {os.linesep} Em seguida, selecione o método que deseja receber e preencha os seu dados solicitados. {os.linesep} *Acesse: deujogo.bet* para sacar seu saldo disponível agora mesmo.'
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 				#VOLTAR PARA O CONTATO PADRÃO
 			contato_padrao = driver.find_element_by_class_name('_2XH9R')
@@ -116,7 +116,7 @@ def bot():
 		elif msg == '6':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
-			texto_modificado = f'*Jogos adiados, cancelados ou remarcados:*  Se um evento de apostas for adiado, cancelado ou não começar na data e hora indicadas na oferta de apostas, por qualquer motivo, e recomeçar ou começar dentro de 72 horas da data e hora de início exibidas, a aposta é válida para esse evento (e acumuladores incluindo ele). Caso um evento de apostas não seja retomado dentro de 72 horas da data de início exibida, as apostas relevantes serão anuladas. Caso de suspensão ou cancelamento de um evento selecionado dentro de uma aposta combinada: a aposta é "devolvida" com um preço final de 1,00, afetando diretamente o preço final da aposta combinada, mas não sua validade.  {os.linesep} *Jogos abandonados*: Como regra geral, qualquer aposta em um evento cujo resultado seja determinável no momento da suspensão de uma competição esportiva, será considerada válida.'
+			texto_modificado = f'*Jogos adiados, cancelados ou remarcados:*  Se um evento de apostas for adiado, cancelado ou não começar na data e hora indicadas na oferta de apostas, por qualquer motivo, e recomeçar ou começar dentro de 72 horas da data e hora de início exibidas, a aposta é válida para esse evento (e acumuladores incluindo ele). Caso um evento de apostas não seja retomado dentro de 72 horas da data de início exibida, as apostas relevantes serão anuladas. Em caso de suspensão ou cancelamento de um evento selecionado dentro de uma aposta combinada: a aposta é "devolvida" com um preço final de 1,00, afetando diretamente o preço final da aposta combinada, mas não sua validade.  {os.linesep} *Jogos abandonados*: Como regra geral, qualquer aposta em um evento cujo resultado seja determinável no momento da suspensão de uma competição esportiva, será considerada válida.'
 			time.sleep(3)
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 				#VOLTAR PARA O CONTATO PADRÃO
