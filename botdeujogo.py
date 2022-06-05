@@ -37,7 +37,7 @@ def bot():
 		if msg == '1':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
-			texto_modificado = f'Criar sua conta no site da Deu Jogo é muito simples:{os.linesep} *1°- acesse o site deujogo.bet*.{os.linesep}  2°- Selecione o botão *"Cadastre-se!"* e preencha todos os campos. Este formulário está localizado no menu de login (canto superior direito). {os.linesep} 3° - Crie sua conta. {os.linesep} 4°- Se o registro foi bem sucedido, você receberá um e-mail com o link para ativar sua conta (verifique o spam){os.linesep} 5°- *aproveite as maiores cotações do Brasil.*'
+			texto_modificado = f'Criar sua conta no site da Deu Jogo é muito simples:{os.linesep} *1°- acesse https://deujogo.bet/registro*.{os.linesep}  2°- Preencha todos os campos. {os.linesep} 3° - Crie sua conta. {os.linesep} 4°- Se o registro foi bem sucedido, você receberá um e-mail com o link para ativar sua conta (verifique o spam){os.linesep} 5°- *aproveite as maiores cotações do Brasil.*'
 			time.sleep(3)
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 				#VOLTAR PARA O CONTATO PADRÃO
@@ -93,7 +93,7 @@ def bot():
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
 			time.sleep(3)
-			campo_de_texto.send_keys('aguarde alguns minutos que você será atendido...', Keys.ENTER)
+			campo_de_texto.send_keys('Aguarde, em alguns minutos que você será atendido...', Keys.ENTER)
 							#VOLTAR PARA O CONTATO PADRÃO
 
 			contato_padrao = driver.find_element_by_class_name('_2XH9R')
@@ -163,7 +163,8 @@ def bot():
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
 			time.sleep(3)
-			campo_de_texto.send_keys('Aguarde, em alguns minutos enviaremos um e-mail de recuperação', Keys.ENTER)
+			texto_modificado = f'Acesse a *página de usuário* (canto superior direito) em seguida, clique *"configurações"*, depois mais um clique em *"Mudar pergunta"*, após aceitar, você reberá um e-mail para cadastrar sua nova pergunta de segurança. {os.linesep} *Acesse: https://deujogo.bet/usuarios/preferencias* para mudar sua pergunta de segurança. _obs: é necessários estar logado_'
+			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 							#VOLTAR PARA O CONTATO PADRÃO
 
 			contato_padrao = driver.find_element_by_class_name('_2XH9R')
@@ -173,13 +174,7 @@ def bot():
 			acao_contato.perform()
 			acao_contato.click()
 			acao_contato.perform()
-				#Mandar mensagem para atendente
-
-			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
-			campo_de_texto.click()
-			time.sleep(3)
-			campo_de_texto.send_keys('RECUPERAR CÓDIGO DA PERGUNTA SECRETA:', Keys.ENTER)
-			campo_de_texto.send_keys(telefone_final, Keys.ENTER)
+				
 
 
 		elif msg == 'Cadastro':
@@ -200,7 +195,7 @@ def bot():
 		elif msg == 'Deposito':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
-			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} *Acesse: deujogo.bet* para realizar um depósito agora mesmo.'
+			texto_modificado = f'Você pode efetuar depósitos via Pix, Transferência bancária ou boleto pela plataforma Pay4Fun. {os.linesep} Clique em saldo e depois vá em "depositar". Clique na plataforma Pay4Fun Go, em seguida, preencha o valor e o e seu E-mail. Na próxima página, digite o seu cpf e clique em prosseguir. Agora escolha o método de depósito e aproveite! {os.linsesp}*Acesse: deujogo.bet* para realizar um depósito agora mesmo.'
 			time.sleep(3)
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 							#VOLTAR PARA O CONTATO PADRÃO
