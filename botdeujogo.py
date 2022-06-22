@@ -66,7 +66,7 @@ def bot():
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
 			time.sleep(3)
-			texto_modificado = f'Para retirar dinheiro da sua conta: {os.linesep} Tudo o que você tem que fazer é ir em *Saque*, digitar o valor e a resposta da Pergunta de Segurança. {os.linesep} Um código único de retirada será gerado. copie o código e cole na página da Pay4Fun. {os.linesep} Em seguida, selecione o método que deseja receber e preencha os seu dados solicitados. {os.linesep} *Acesse: deujogo.bet* para sacar seu saldo disponível agora mesmo.'
+			texto_modificado = f'Para retirar dinheiro da sua conta, tudo o que você tem que fazer é ir em *Saque*, digitar o valor e a resposta da Pergunta de Segurança. {os.linesep} Um código único de retirada será gerado. copie o código e cole na página da Pay4Fun. {os.linesep} Em seguida, selecione o método que deseja receber e preencha os seu dados solicitados. {os.linesep} *Acesse: deujogo.bet* para sacar seu saldo disponível agora mesmo.'
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 				#VOLTAR PARA O CONTATO PADRÃO
 			contato_padrao = driver.find_element_by_class_name('_2XH9R')
@@ -80,7 +80,7 @@ def bot():
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
 			time.sleep(3)
-			campo_de_texto.send_keys('*acesse: https://deujogo.bet/ayuda?tema=reglamento* para acessar o regulamento', Keys.ENTER)
+			campo_de_texto.send_keys('*acesse: https://deujogo.bet/ajuda?tema=reglamento* para acessar o regulamento', Keys.ENTER)
 				#VOLTAR PARA O CONTATO PADRÃO
 			contato_padrao = driver.find_element_by_class_name('_2XH9R')
 			acao_contato = webdriver.common.action_chains.ActionChains(driver)
@@ -93,7 +93,8 @@ def bot():
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
 			time.sleep(3)
-			campo_de_texto.send_keys('Aguarde, em alguns minutos que você será atendido...', Keys.ENTER)
+			texto_modificado = f'Aguarde, em alguns minutos que você será atendido. {os.linesep}_(horário de atendimento: das 8:00 às 18:00)_'
+			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 							#VOLTAR PARA O CONTATO PADRÃO
 
 			contato_padrao = driver.find_element_by_class_name('_2XH9R')
@@ -131,7 +132,7 @@ def bot():
 		elif msg == '7':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
-			texto_modificado = f'*Acesse:  https://deujogo.bet/ayuda?tema=deportes-como%20apostar*'
+			texto_modificado = f'*Acesse: https://deujogo.bet/ajuda?tema=seguridad*'
 			time.sleep(3)
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 				#VOLTAR PARA O CONTATO PADRÃO
@@ -146,7 +147,7 @@ def bot():
 		elif msg == '8':
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
-			texto_modificado = f'*Acesse:  https://deujogo.bet/recuperar-clave* {os.linesep}Em seguida, digite o seu E-mail e clique em "Recuperação de senha"'
+			texto_modificado = f'*Acesse: https://deujogo.bet/recuperar-senha* {os.linesep}Em seguida, digite o seu E-mail e clique em "Recuperação de senha"'
 			time.sleep(3)
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 				#VOLTAR PARA O CONTATO PADRÃO
@@ -163,7 +164,7 @@ def bot():
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
 			time.sleep(3)
-			texto_modificado = f'Acesse a *página de usuário* (canto superior direito) em seguida, clique *"configurações"*, depois mais um clique em *"Mudar pergunta"*, após aceitar, você reberá um e-mail para cadastrar sua nova pergunta de segurança. {os.linesep} *Acesse: https://deujogo.bet/usuarios/preferencias* para mudar sua pergunta de segurança. _obs: é necessários estar logado_'
+			texto_modificado = f'Acesse a *página de usuário* (canto superior direito) em seguida, clique em *"configurações"*, depois mais um clique em *"Mudar pergunta"*, após aceitar, você reberá um e-mail para cadastrar sua nova pergunta de segurança.'
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 							#VOLTAR PARA O CONTATO PADRÃO
 
