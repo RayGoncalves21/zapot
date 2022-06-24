@@ -175,6 +175,28 @@ def bot():
 			acao_contato.perform()
 			acao_contato.click()
 			acao_contato.perform()
+
+		elif msg == '10':
+			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
+			campo_de_texto.click()
+			time.sleep(3)
+			texto_modificado = f"""Bônus de primeiro depósito:
+*• Até R$ 1.000,00* • O bônus credita o valor do prêmio • bônus não pode ser usado duas vezes na mesma partida • Ele também não pode ser sacado, apenas utilizado pra apostar (você saca a premiação) • pode ser usado em E-sports(esportes eletrônicos) • não pode encerrar aposta
+
+{os.linesep}
+mercados aceitos: 1x2, ao vivo, handicap ou margem vencedora, 1 gol, resultado exato, intervalo/final do jogo, 1x2 e ambas as equipes para marcar, números exatos de gols
+{os.linesep}
+Mercados não aceitos: empate devolve aposta, total (+1.5 gols e etc), ambos marcam, dupla hipótese, parte mais produtiva, ímpar/par'"""
+			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
+							#VOLTAR PARA O CONTATO PADRÃO
+
+			contato_padrao = driver.find_element_by_class_name('_2XH9R')
+			acao_contato = webdriver.common.action_chains.ActionChains(driver)
+			acao_contato.move_to_element_with_offset(contato_padrao,0,-20)
+			acao_contato.click()
+			acao_contato.perform()
+			acao_contato.click()
+			acao_contato.perform()	
 				
 
 
@@ -414,13 +436,55 @@ def bot():
 			acao_contato.perform()
 			acao_contato.click()
 			acao_contato.perform()	
+		elif msg == 'Bônus':
+			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
+			campo_de_texto.click()
+			time.sleep(3)
+			texto_modificado = f"""Bônus de primeiro depósito:
+*• Até R$ 1.000,00* • O bônus credita o valor do prêmio • bônus não pode ser usado duas vezes na mesma partida • Ele também não pode ser sacado, apenas utilizado pra apostar (você saca a premiação) • pode ser usado em E-sports(esportes eletrônicos) • não pode encerrar aposta
+
+{os.linesep}
+mercados aceitos: 1x2, ao vivo, handicap ou margem vencedora, 1 gol, resultado exato, intervalo/final do jogo, 1x2 e ambas as equipes para marcar, números exatos de gols
+{os.linesep}
+Mercados não aceitos: empate devolve aposta, total (+1.5 gols e etc), ambos marcam, dupla hipótese, parte mais produtiva, ímpar/par'"""
+			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
+							#VOLTAR PARA O CONTATO PADRÃO
+
+			contato_padrao = driver.find_element_by_class_name('_2XH9R')
+			acao_contato = webdriver.common.action_chains.ActionChains(driver)
+			acao_contato.move_to_element_with_offset(contato_padrao,0,-20)
+			acao_contato.click()
+			acao_contato.perform()
+			acao_contato.click()
+			acao_contato.perform()	
+		elif msg == 'Como funciona o bônus':
+			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
+			campo_de_texto.click()
+			time.sleep(3)
+			texto_modificado = f"""Bônus de primeiro depósito:
+*• Até R$ 1.000,00* • O bônus credita o valor do prêmio • bônus não pode ser usado duas vezes na mesma partida • Ele também não pode ser sacado, apenas utilizado pra apostar (você saca a premiação) • pode ser usado em E-sports(esportes eletrônicos) • não pode encerrar aposta
+
+{os.linesep}
+*mercados aceitos:* 1x2, ao vivo, handicap ou margem vencedora, 1 gol, resultado exato, intervalo/final do jogo, 1x2 e ambas as equipes para marcar, números exatos de gols
+{os.linesep}
+*Mercados não aceitos:* empate devolve aposta, total (+1.5 gols e etc), ambos marcam, dupla hipótese, parte mais produtiva, ímpar/par'"""
+			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
+							#VOLTAR PARA O CONTATO PADRÃO
+
+			contato_padrao = driver.find_element_by_class_name('_2XH9R')
+			acao_contato = webdriver.common.action_chains.ActionChains(driver)
+			acao_contato.move_to_element_with_offset(contato_padrao,0,-20)
+			acao_contato.click()
+			acao_contato.perform()
+			acao_contato.click()
+			acao_contato.perform()						
 
 
 		else:
 			campo_de_texto = driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 			campo_de_texto.click()
 			time.sleep(3)
-			texto_modificado = f'Bem-vindo ao atendimento da Deu Jogo. *Como posso ajudar você hoje?*{os.linesep} [1] - Como fazer o meu cadastro no site da Deu Jogo? {os.linesep} [2] - Como faço depósito?{os.linesep} [3] - Como faço saque? {os.linesep} [4] - Regulamento  {os.linesep}[5] - Falar com um atendente{os.linesep} [6] - Jogos cancelados ou adiados{os.linesep}[7] - Dúvidas frequentes - Central de ajuda {os.linesep}[8] - Esqueci minha senha {os.linesep}[9] - Recuperar pergunta de segurança para saque'
+			texto_modificado = f'Bem-vindo ao atendimento da Deu Jogo. *Como posso ajudar você hoje?*{os.linesep} [1] - Como fazer o meu cadastro no site da Deu Jogo? {os.linesep} [2] - Como faço depósito?{os.linesep} [3] - Como faço saque? {os.linesep} [4] - Regulamento  {os.linesep}[5] - Falar com um atendente{os.linesep} [6] - Jogos cancelados ou adiados{os.linesep}[7] - Dúvidas frequentes - Central de ajuda {os.linesep}[8] - Esqueci minha senha {os.linesep}[9] - Recuperar pergunta de segurança para saque {os.linesep}[10] - Bônus'
 			campo_de_texto.send_keys(texto_modificado, Keys.ENTER)
 				#VOLTAR PARA O CONTATO PADRÃO
 			contato_padrao = driver.find_element_by_class_name('_2XH9R')
